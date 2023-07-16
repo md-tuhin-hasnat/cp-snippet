@@ -30,7 +30,8 @@ List the available snippets provided by your extension. You can provide a table 
 | Prefix   | Description             |
 | -------- | ----------------------- |
 | !cfor | cout an array |
-| !ll | logn long int |
+| ll | long long |
+| ull | unsigned long long |
 | !bsgmnt  | building (constructing) a Sigment Tree|
 | !qsgmnt | query of sigment tree|
 

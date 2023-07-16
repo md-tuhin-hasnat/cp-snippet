@@ -3,9 +3,9 @@
         "prefix": "!bsgmnt",
         "body": [
           "const int N = ${1:1e6};",
-          "${1:long long} tree[N*4];",
-          "${1:long long} parentLogic(node){",
-          "    ${2:return tree[node*2]+tree[node*2+1];}",
+          "${2:long long} tree[N*4];",
+          "${2:long long} parentLogic(node){",
+          "    ${3:return tree[node*2]+tree[node*2+1];}",
           "}  ",
           "void SegmentTree(int node, int L, int R, vector<int> &v){",
           "    if(L==R){",

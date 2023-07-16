@@ -1,0 +1,16 @@
+{
+    "long long": {
+        "prefix": "ll",
+        "body": [
+          "long long ${0: }"
+        ],
+        "description": "long long"
+      },
+      "unsigned long long": {
+        "prefix": "ull",
+        "body": [
+          "unsgigned long long ${0: }"
+        ],
+        "description": "unsigned long long"
+      }
+}

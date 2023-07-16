@@ -19,6 +19,10 @@
       {
         "language": "cpp",
         "path": "./snippets/segment-tree.code-snippets"
+      },
+      {
+        "language": "cpp",
+        "path": "./snippets/variable.code-snippets"
       }
     ]
   }
