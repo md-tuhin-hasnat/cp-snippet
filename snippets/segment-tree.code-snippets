@@ -1,0 +1,59 @@
+{
+    "building a segment tree": {
+        "prefix": "bsgmnt",
+        "body": [
+          "const int N = ${1:1e6};",
+          "${1:long long} tree[N*4];",
+          "${1:long long} parentLogic(node){",
+          "    ${2:return tree[node*2]+tree[node*2+1];}",
+          "}  ",
+          "void SegmentTree(int node, int L, int R, vector<int> &v){",
+          "    if(L==R){",
+          "        tree[node] = v[L];",
+          "        return;",
+          "    }",
+          "    int mid = (L+R)/2;",
+          "    SegmentTree(node*2,L,mid,v);",
+          "    SegmentTree((node*2)+1,mid+1,R,v);",
+          "    tree[node] = parentLogic(node);",
+          "}"
+        ],
+        "description": "building a segment tree"
+      },
+      "query from a segment tree": {
+        "prefix": "qsgmnt",
+        "body": [
+          "${1: long long} queryLogic(${1: long long} a,${1: long long} b){",
+          "    return a+b;",
+          "} ",
+          "long long query(int node, int L, int R, int l, int r){",
+          "    if(L > r || R < l) return 0;",
+          "    else if(L >= l && R <= r){",
+          "        return tree[node];",
+          "    }",
+          "    int mid = (L+R)/2;",
+          "    ${1: long long} a = query(node*2, L, mid, l,r);",
+          "    ${1: long long} b = query((node*2)+1, mid+1, R, l,r);",
+          "    return queryLogic(a,b);",
+          "}"
+        ],
+        "description": "query from a segment tree"
+      },
+      "updating an element in a segment tree": {
+        "prefix": "usgmnt",
+        "body": [
+          "void update(int node, int L, int R, int i, int x){",
+          "    if(L == i && R == i){",
+          "        tree[node] = x;",
+          "        return;",
+          "    }",
+          "    else if(L > i || R < i) return;",
+          "    int mid = (L+R)/2;",
+          "    update(node*2, L, mid, i, x);",
+          "    update((node*2)+1, mid+1, R, i, x);",
+          "    tree[node] = parentLogic(node);",
+          "}"
+        ],
+        "description": "updating an element in a segment tree"
+      }
+}

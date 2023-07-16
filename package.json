@@ -1,0 +1,25 @@
+{
+  "name": "cp-snippet",
+  "displayName": "CP Snippet",
+  "description": "competitive programming snippet",
+  "version": "1.0.0",
+  "icon": "./icon.png",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "cpp",
+        "path": "./snippets/cfor.code-snippets"
+      },
+      {
+        "language": "cpp",
+        "path": "./snippets/segment-tree.code-snippets"
+      }
+    ]
+  }
+}
