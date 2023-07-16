@@ -2,7 +2,7 @@
   "name": "cp-snippet",
   "displayName": "CP Snippet",
   "description": "competitive programming snippet",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "icon": "./icon.png",
   "engines": {
     "vscode": "^1.80.0"

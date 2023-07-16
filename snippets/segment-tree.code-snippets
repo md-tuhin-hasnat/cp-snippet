@@ -1,6 +1,6 @@
 {
     "building a segment tree": {
-        "prefix": "bsgmnt",
+        "prefix": "!bsgmnt",
         "body": [
           "const int N = ${1:1e6};",
           "${1:long long} tree[N*4];",
@@ -21,7 +21,7 @@
         "description": "building a segment tree"
       },
       "query from a segment tree": {
-        "prefix": "qsgmnt",
+        "prefix": "!qsgmnt",
         "body": [
           "${1: long long} queryLogic(${1: long long} a,${1: long long} b){",
           "    return a+b;",
@@ -40,7 +40,7 @@
         "description": "query from a segment tree"
       },
       "updating an element in a segment tree": {
-        "prefix": "usgmnt",
+        "prefix": "!usgmnt",
         "body": [
           "void update(int node, int L, int R, int i, int x){",
           "    if(L == i && R == i){",
